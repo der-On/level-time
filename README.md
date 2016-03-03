@@ -42,15 +42,24 @@ var api = levelTime.Api();
 var server = levelTime.Server(api);
 
 // API exposes these methods, all returning promises
-// time entries are always stored within groups. You can choose any group name you want
-api.tracker.start(group [, data]); // Starts time tracking
-api.tracker.stop(group, id); // stops time tracking
-api.tracker.get(group, id); // reads a single time entry
-api.tracker.update(group, id data); // updates a time entry
-api.tracker.remove(group, id); // removes a time entry
-api.tracker.filter([group,] filter); // returns a list of time entries filtered using the 'filter' function
-api.tracker.consolidate([group, ], filter); // returns consolidated time of the filtered time entries
-api.tracker.running([group, ], filter); // returns all currently running timers
+// time entries are always stored within groups.
+// You can choose any group name you want.
+api.timers.start(group [, data]); // Starts time tracking
+api.timers.stop(group, id); // stops time tracking
+api.timers.get(group, id); // reads a single time entry
+api.timers.update(group, id, data); // updates a time entry
+api.timers.remove(group, id); // removes a time entry
+api.timers.filter([group,] filter); // returns a list of time entries filtered using the 'filter' function
+api.timers.consolidate([group, ], filter); // returns consolidated time of the filtered time entries
+api.timers.running([group, ], filter); // returns all currently running timers
+
+api.groups.create(name, data); // create new group
+api.groups.update(name, data); // update existing group
+api.groups.all(); // returns all existing groups
+api.groups.names(); // returns names of all existing groups
+api.groups.remove(name); // removes existing group and all of its timers
+api.groups.timers(name); // lists all timers of a group
+api.groups.runningTimers(name); // lists all running timers of a group
 ```
 
 ## Usage (API with own leveldb)
