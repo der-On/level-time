@@ -50,4 +50,5 @@ api.tracker.update(group, id data); // updates a time entry
 api.tracker.remove(group, id); // removes a time entry
 api.tracker.filter([group,] filter); // returns a list of time entries filtered using the 'filter' function
 api.tracker.consolidate([group, ], filter); // returns consolidated time of the filtered time entries
+api.tracker.running([group, ], filter); // returns all currently running timers
 ```
