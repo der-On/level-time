@@ -1,0 +1,39 @@
+{
+  "name": "level-time",
+  "version": "0.0.1",
+  "description": "RESTful Time-Tracking with leveldb backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node node_modules/.bin/mocha lib/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/der-On/level-time.git"
+  },
+  "keywords": [
+    "time-tracking",
+    "leveldb",
+    "rest"
+  ],
+  "author": "Ondrej Brinkel <info@anzui.de>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/der-On/level-time/issues"
+  },
+  "homepage": "https://github.com/der-On/level-time#readme",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "level": "^1.4.0",
+    "lodash": "^4.6.1",
+    "multilevel": "^7.3.0",
+    "restify": "^4.0.4",
+    "sublevel": "^2.4.0",
+    "uuid": "^2.0.1"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.4.5",
+    "supertest": "^1.2.0"
+  }
+}
