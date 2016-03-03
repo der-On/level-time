@@ -5,7 +5,7 @@ RESTful Time-Tracker with leveldb backend
 ## Installation
 
 ```
-npm install level-time
+npm install level-timer
 ```
 
 ## Usage (Command line)
@@ -30,16 +30,16 @@ You can pass the following environment variables:
 ## Usage (Programatically)
 
 ```javascript
-var levelTime = require('level-time');
+var timer = require('level-timer');
 
 // start the backend
-var backend = levelTime.Backend();
+var backend = timer.Backend();
 
 // create the api
-var api = levelTime.Api();
+var api = timer.Api();
 
 // create a RESTful server from the api
-var server = levelTime.Server(api);
+var server = timer.Server(api);
 
 // API exposes these methods, all returning promises
 // time entries are always stored within groups.
@@ -70,18 +70,18 @@ Use this if you have your own leveldb server or using any leveldown/levelup comp
 
 ```javascript
 var level = require('level');
-var levelTime = require('level-time');
+var timer = require('level-timer');
 
 var myLevel = level('./myDB');
 
-var api = levelTime.Api({ db: myLevel });
+var api = timer.Api({ db: myLevel });
 ```
 
 With a slight change you can use it in the browser too:
 
 ```javascript
 var memdb = require('memdb');
-var Api = require('level-time/lib/api');
+var Api = require('level-timer/api');
 
 var myDb = memdb();
 var api = Api({ db: myDb });

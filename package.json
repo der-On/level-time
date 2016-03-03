@@ -4,7 +4,7 @@
   "description": "RESTful Time-Tracking with leveldb backend",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node start_server.js",
     "test": "node node_modules/.bin/mocha lib/**/*.test.js"
   },
   "repository": {
