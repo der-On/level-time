@@ -52,3 +52,28 @@ api.tracker.filter([group,] filter); // returns a list of time entries filtered 
 api.tracker.consolidate([group, ], filter); // returns consolidated time of the filtered time entries
 api.tracker.running([group, ], filter); // returns all currently running timers
 ```
+
+## Usage (API with own leveldb)
+
+You can pass your own level database to the API.
+
+Use this if you have your own leveldb server or using any leveldown/levelup compatible thing.
+
+```javascript
+var level = require('level');
+var levelTime = require('level-time');
+
+var myLevel = level('./myDB');
+
+var api = levelTime.Api({ db: myLevel });
+```
+
+With a slight change you can use it in the browser too:
+
+```javascript
+var memdb = require('memdb');
+var Api = require('level-time/lib/api');
+
+var myDb = memdb();
+var api = Api({ db: myDb });
+```
