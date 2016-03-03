@@ -1,5 +1,5 @@
 {
-  "name": "level-time",
+  "name": "level-timer",
   "version": "0.0.1",
   "description": "RESTful Time-Tracking with leveldb backend",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/der-On/level-time.git"
+    "url": "git+https://github.com/der-On/level-timer.git"
   },
   "keywords": [
     "time-tracking",
@@ -19,9 +19,9 @@
   "author": "Ondrej Brinkel <info@anzui.de>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/der-On/level-time/issues"
+    "url": "https://github.com/der-On/level-timer/issues"
   },
-  "homepage": "https://github.com/der-On/level-time#readme",
+  "homepage": "https://github.com/der-On/level-timer#readme",
   "dependencies": {
     "debug": "^2.2.0",
     "level": "^1.4.0",
