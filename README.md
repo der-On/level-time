@@ -1,4 +1,4 @@
-# level-time
+# level-timer
 
 RESTful Time-Tracker with leveldb backend
 
