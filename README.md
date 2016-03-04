@@ -40,6 +40,7 @@ var api = timer.Api();
 
 // create a RESTful server from the api
 var server = timer.Server(api);
+server.start(process.env.PORT || 8080);
 
 // API exposes these methods, all returning promises
 // time entries are always stored within groups.
