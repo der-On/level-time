@@ -49,7 +49,7 @@ api.timers.stop(group, id); // stops time tracking
 api.timers.get(group, id); // reads a single time entry
 api.timers.update(group, id, data); // updates a time entry
 api.timers.remove(group, id); // removes a time entry
-api.timers.filter([group,] filter); // returns a list of time entries filtered using the 'filter' function
+api.timers.find([group,] filter); // returns a list of time entries filtered using the 'filter' function
 api.timers.consolidate([group, ], filter); // returns consolidated time of the filtered time entries
 api.timers.running([group, ], filter); // returns all currently running timers
 
